@@ -1,4 +1,4 @@
-@PostDetailCtrl = ($scope, $routeParams, postService) ->
+@PostDetailCtrl = ($scope, $location, $routeParams, postService) ->
   
   # View binding...
 
@@ -9,3 +9,5 @@
   # Invoke service...
   
   postService.all()
+
+  $scope.viewIndex = -> $location.url "/index"
