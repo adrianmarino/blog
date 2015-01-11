@@ -1,19 +1,19 @@
 #= require_self
-#= require_tree ./controllers/main
-#= require_tree ./directives/main
-#= require_tree ./filters/main
-#= require_tree ./services/main
+#= require_tree ./controllers
+#= require_tree ./directives
+#= require_tree ./filters
+#= require_tree ./services
 
 Blog = angular.module('Blog', ['ngRoute'])
 
 Blog.config(['$routeProvider', ($routeProvider) ->
-  # Route for '/post'
-  $routeProvider.when('/post/:postId', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' } )
+  $routeProvider.when('/post/:postId', { templateUrl: '../assets/posts/detail.html', controller: 'PostDetailCtrl' } )
 
   # Default
-  $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrl' } )
+  $routeProvider.otherwise({ templateUrl: '../assets/posts/index.html', controller: 'PostIndexCtrl' } )
 
 ])
+
 Blog.config(["$httpProvider", (provider) ->
   provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 ])

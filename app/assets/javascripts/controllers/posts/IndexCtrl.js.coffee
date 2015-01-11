@@ -1,4 +1,4 @@
-@IndexCtrl = ($scope, $location, $http, $routeParams, postService) ->
+@PostIndexCtrl = ($scope, $location, $http, $routeParams, postService) ->
   $scope.data = postService.data
 
   postService.all()

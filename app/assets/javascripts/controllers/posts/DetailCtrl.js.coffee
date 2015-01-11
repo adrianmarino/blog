@@ -1,4 +1,4 @@
-@PostCtrl = ($scope, $routeParams, postService) ->
+@PostDetailCtrl = ($scope, $routeParams, postService) ->
   $scope.data =
     postId: $routeParams.postId
     posts: postService.data.posts
