@@ -1,5 +1,15 @@
-<h1 class="text-center">Blog</h1>
-<div class="row" ng-repeat="post in data.posts">
-    <h2><a ng-click="viewPost(post.id)">{{ post.title }}</a></h2>
-    <p>{{ post.contents }}</p>
+<br />
+<br />
+<br />
+<br />
+<div class="panel panel-primary">
+  	<div class="panel-heading"><h2>Posts</h2></div>
+	<div class="panel-body">
+		<ul class="list-group">
+			<a ng-click="viewPost(post.id)" class="list-group-item" ng-repeat="post in data.posts">
+				<h4 class="list-group-item-heading">{{ post.title }}</h4>
+			    <p>{{ post.contents }}</p>
+			</a>
+		</ul>
+	</div>
 </div>
